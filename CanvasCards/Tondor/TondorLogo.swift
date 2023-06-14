@@ -3,7 +3,7 @@ import SwiftUI
 struct TondorLogo: View {
     var body: some View {
         Label {
-            Text("Tondor")
+            Text("CanvasCards")
                 .font(.title2)
                 .bold()
         } icon: {

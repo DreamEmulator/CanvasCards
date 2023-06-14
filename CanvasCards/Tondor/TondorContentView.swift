@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct TondorContentView: View {
-    var body: some View {
+public struct TondorContentView: View {
+  public var body: some View {
         VStack {
             TondorLogo()
                 .padding(.top)
@@ -28,6 +28,6 @@ struct TondorContentView: View {
 
 struct TondorContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TondorContentView()
     }
 }

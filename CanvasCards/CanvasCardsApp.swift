@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct CanvasCardsApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: CanvasCardsDocument()) { file in
-            ContentView(document: file.$document)
-        }
+      WindowGroup {
+        KishimisuView()
+      }
     }
 }
