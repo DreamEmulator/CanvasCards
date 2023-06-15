@@ -3,8 +3,6 @@ import SwiftUI
 public struct TondorContentView: View {
   public var body: some View {
         VStack {
-            TondorLogo()
-                .padding(.top)
 
             TabView {
                 SwipeView()

@@ -11,7 +11,7 @@ import SwiftUI
 struct CanvasCardsApp: App {
     var body: some Scene {
       WindowGroup {
-        KishimisuView()
+        OpeningTransition()
       }
     }
 }

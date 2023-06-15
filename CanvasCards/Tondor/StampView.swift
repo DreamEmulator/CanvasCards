@@ -21,9 +21,9 @@ struct StampView: View {
 struct StampView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StampView(label: "Like", color: .green)
-            StampView(label: "Nope", color: .red)
-            StampView(label: "Super\nlike", color: .blue)
+            StampView(label: "Ready", color: .green)
+            StampView(label: "Later", color: .red)
+            StampView(label: "Key Insight", color: .blue)
         }
         .padding()
         .previewLayout(.sizeThatFits)

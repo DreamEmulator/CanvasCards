@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA4D35422A3A2C1C008584E7 /* KishimisuDancingStars.fsh in Resources */ = {isa = PBXBuildFile; fileRef = AA4D35412A3A2C1C008584E7 /* KishimisuDancingStars.fsh */; };
+		AA4D35442A3A3C07008584E7 /* FadeOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D35432A3A3C07008584E7 /* FadeOutView.swift */; };
+		AA4D35492A3B96E4008584E7 /* OpeningTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D35482A3B96E4008584E7 /* OpeningTransition.swift */; };
+		AA4D354C2A3B97F5008584E7 /* AnyTransition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4D354B2A3B97F5008584E7 /* AnyTransition+Extensions.swift */; };
 		AA6DBFCD2A35E51C00F7F6B2 /* TondorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DBFCC2A35E51C00F7F6B2 /* TondorContentView.swift */; };
 		AA6DBFD32A35E53E00F7F6B2 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DBFCE2A35E53E00F7F6B2 /* StampView.swift */; };
 		AA6DBFD42A35E53E00F7F6B2 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6DBFCF2A35E53E00F7F6B2 /* ProfileCardView.swift */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA4D35412A3A2C1C008584E7 /* KishimisuDancingStars.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = KishimisuDancingStars.fsh; sourceTree = "<group>"; };
+		AA4D35432A3A3C07008584E7 /* FadeOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FadeOutView.swift; path = Views/FadeOutView.swift; sourceTree = "<group>"; };
+		AA4D35482A3B96E4008584E7 /* OpeningTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningTransition.swift; sourceTree = "<group>"; };
+		AA4D354B2A3B97F5008584E7 /* AnyTransition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extensions.swift"; sourceTree = "<group>"; };
 		AA6DBFCC2A35E51C00F7F6B2 /* TondorContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TondorContentView.swift; sourceTree = "<group>"; };
 		AA6DBFCE2A35E53E00F7F6B2 /* StampView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		AA6DBFCF2A35E53E00F7F6B2 /* ProfileCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
@@ -99,6 +107,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA4D35472A3B96CE008584E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA4D35482A3B96E4008584E7 /* OpeningTransition.swift */,
+			);
+			name = Views;
+			path = ../Views;
+			sourceTree = "<group>";
+		};
+		AA4D354A2A3B97DB008584E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA4D354B2A3B97F5008584E7 /* AnyTransition+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AA6DBFD82A35E55F00F7F6B2 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +150,11 @@
 		AA6DBFDE2A36DD9100F7F6B2 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				AA4D354A2A3B97DB008584E7 /* Extensions */,
+				AA4D35472A3B96CE008584E7 /* Views */,
 				AA6DBFE22A36DE0B00F7F6B2 /* Shaders */,
 				AA6DBFDF2A36DD9E00F7F6B2 /* Scenes */,
+				AA4D35432A3A3C07008584E7 /* FadeOutView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -143,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				AA6DBFE52A36DE7500F7F6B2 /* Kishimisu.fsh */,
+				AA4D35412A3A2C1C008584E7 /* KishimisuDancingStars.fsh */,
 				AA6DBFE92A397ACF00F7F6B2 /* KishimisuNeonCore.fsh */,
 				AA6DBFE72A38453C00F7F6B2 /* KishimisuNeonSquirqles.fsh */,
 			);
@@ -317,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6DBFE82A38453C00F7F6B2 /* KishimisuNeonSquirqles.fsh in Resources */,
+				AA4D35422A3A2C1C008584E7 /* KishimisuDancingStars.fsh in Resources */,
 				AABF14852A2AB6DC00537BCA /* Preview Assets.xcassets in Resources */,
 				AA6DBFEA2A397ACF00F7F6B2 /* KishimisuNeonCore.fsh in Resources */,
 				AA6DBFE62A36DE7500F7F6B2 /* Kishimisu.fsh in Resources */,
@@ -348,11 +378,14 @@
 				AABF147C2A2AB6DB00537BCA /* CanvasCardsDocument.swift in Sources */,
 				AA6DBFDB2A35E55F00F7F6B2 /* Profile.swift in Sources */,
 				AABF147A2A2AB6DB00537BCA /* CanvasCardsApp.swift in Sources */,
+				AA4D354C2A3B97F5008584E7 /* AnyTransition+Extensions.swift in Sources */,
 				AA6DBFCD2A35E51C00F7F6B2 /* TondorContentView.swift in Sources */,
 				AA6DBFD32A35E53E00F7F6B2 /* StampView.swift in Sources */,
 				AA6DBFD72A35E53E00F7F6B2 /* TondorLogo.swift in Sources */,
 				AA6DBFD42A35E53E00F7F6B2 /* ProfileCardView.swift in Sources */,
 				AA6DBFD62A35E53E00F7F6B2 /* SwipeView.swift in Sources */,
+				AA4D35442A3A3C07008584E7 /* FadeOutView.swift in Sources */,
+				AA4D35492A3B96E4008584E7 /* OpeningTransition.swift in Sources */,
 				AA6DBFD52A35E53E00F7F6B2 /* ProfileInfoView.swift in Sources */,
 				AABF147E2A2AB6DB00537BCA /* ContentView.swift in Sources */,
 				AA6DBFDC2A35E55F00F7F6B2 /* LikeType.swift in Sources */,

@@ -19,7 +19,7 @@ struct ProfileInfoView: View {
         .padding()
         .foregroundColor(.white)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(LinearGradient(colors: [.clear, .pink], startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom))
     }
 }
 

@@ -27,6 +27,6 @@ void main(){
      smoothstep(0.35, 0.4, abs(abs(mod(iTime, 2.0) - i * 0.1) - 1.0)));  // animation
   }
   finalColor = O.xyz;
-  float threshold = 0.; // TODO: Tweak threshold for light mode
-  gl_FragColor = finalColor.x < threshold && finalColor.y < threshold && finalColor.z < threshold ? vec4(1.0) : vec4(finalColor, 1.0);
+//  gl_FragColor = u_darkMode == 1.0 ? vec4(finalColor, 1.0) : vec4(1-finalColor.x, 1-finalColor.y, 1-finalColor.z,1.0);
+  gl_FragColor = vec4(finalColor, 1.0);
 }

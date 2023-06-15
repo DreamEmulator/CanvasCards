@@ -9,13 +9,28 @@ import SwiftUI
 import SpriteKit
 
 struct KishimisuView: View {
+  @State private var showSplash = false
+
   var body: some View {
     GeometryReader { geometry in
-      VStack {
-        SpriteView(scene: createSpriteKitScene(size: geometry.size))
-          .frame(width: geometry.size.height, height: geometry.size.height)
+      ZStack {
+        if showSplash {
+          SpriteView(scene: createSpriteKitScene(size: geometry.size))
+            .frame(width: geometry.size.height, height: geometry.size.height)
+            .transition(.fadeTransition)
+        } else {
+          TondorLogo()
+            .padding(.top)
+        }
       }.frame(maxWidth: .infinity, maxHeight: .infinity)
     }.edgesIgnoringSafeArea(.all)
+      .onAppear{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+          withAnimation {
+            showSplash.toggle()
+          }
+        }
+      }
   }
 
   func createSpriteKitScene(size: CGSize) -> SKScene {
@@ -35,11 +50,14 @@ struct KishimisuView: View {
 
     let shaders: [SKShader] = [
       SKShader(fileNamed: "Kishimisu"),
-      SKShader(fileNamed: "KishimisuNeonSquirqles")]
-    sprite.shader = shaders[Int(arc4random_uniform(2))]
-    
+      SKShader(fileNamed: "KishimisuNeonSquirqles"),
+      SKShader(fileNamed: "KishimisuDancingStars")]
+//    sprite.shader = shaders[Int(arc4random_uniform(2))]
+    sprite.shader = shaders[1]
+
     if let shader = sprite.shader {
       let uniforms: [SKUniform] = [
+        SKUniform(name: "u_darkMode", float: UITraitCollection.current.userInterfaceStyle == .dark ? 1.0 : 0.0),
         SKUniform(name: "u_speed", float: 3),
         SKUniform(name: "u_strength", float: 2.5),
         SKUniform(name: "u_frequency", float: 10),

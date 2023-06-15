@@ -36,6 +36,5 @@ void main() {
 
     finalColor += col * d;
   }
-  float threshold = 0.; // TODO: Tweak threshold for light mode
-  gl_FragColor = finalColor.x < threshold && finalColor.y < threshold && finalColor.z < threshold ? vec4(1.0) : vec4(finalColor, 1.0);
+   gl_FragColor = u_darkMode == 1.0 ? vec4(finalColor, 1.0) : vec4(1-finalColor.x, 1-finalColor.y, 1-finalColor.z,1.0);
 }

@@ -11,19 +11,19 @@ struct ProfileCardView: View {
 
             // Stamps for like/dislike/superlike that fade in as you swipe
             Group {
-                StampView(label: "Like", color: .green)
+                StampView(label: "Card ready", color: .green)
                     .rotationEffect(.degrees(-15))
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .opacity(Double(offset.width / 50))
 
-                StampView(label: "Nope", color: .red)
+                StampView(label: "To do", color: .red)
                     .rotationEffect(.degrees(15))
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                     .opacity(abs(min(Double(offset.width / 50), 0)))
 
-                StampView(label: "Super\nlike", color: .blue)
+                StampView(label: "Key card", color: .blue)
                     .rotationEffect(.degrees(-15))
                     .padding(.bottom, 80)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -31,9 +31,7 @@ struct ProfileCardView: View {
             }
         }
         .background(
-            Image(profile.images.first ?? "")
-                .resizable()
-                .scaledToFill()
+          LinearGradient(colors: [.white, .mint], startPoint: .top, endPoint: .bottom)
         )
         .cornerRadius(8)
         .rotationEffect(.degrees(Double(offset.width / 5)))

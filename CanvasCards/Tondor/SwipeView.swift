@@ -15,7 +15,6 @@ struct SwipeView: View {
                     onLike(profile, type: likeType)
                 }
                 .padding()
-                .clipped()
             }
         }
     }
@@ -42,7 +41,7 @@ private struct DoneView: View {
     let reload: () -> Void
     var body: some View {
         VStack {
-            Text("You've seen them all!")
+            Text("You've filled in all the cards!")
 
             Button("Refresh") {
                 reload()
